@@ -40,8 +40,11 @@ discrepancy_summary.csv: Summary of discrepancies by type and count.
 - README.md: Documentation of the project.
 
 #How to Run the Code
+
 Prerequisites
+
 Python 3.7 or higher installed.
+
 Required libraries: pandas, numpy.
 
 
@@ -50,11 +53,15 @@ git clone https://github.com/your-username/data-discrepancy-analysis.git
 cd data-discrepancy-analysis
 
 (Optional) Create and activate a virtual environment:
+
 python3 -m venv venv
+
 source venv/bin/activate  # For macOS/Linux
+
 venv\\Scripts\\activate   # For Windows
 
 pip install pandas numpy
+
 python data_discrepancy_analysis.py
 
 
