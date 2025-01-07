@@ -53,20 +53,21 @@ Required libraries: pandas, numpy.
 
 
 Clone this repository:
-git clone https://github.com/your-username/data-discrepancy-analysis.git
-cd data-discrepancy-analysis
+- git clone https://github.com/your-username/data-discrepancy-analysis.git 
 
-(Optional) Create and activate a virtual environment:
+- cd data-discrepancy-analysis
 
-python3 -m venv venv
+- (Optional) Create and activate a virtual environment:
 
-source venv/bin/activate  # For macOS/Linux
+- python3 -m venv venv
 
-venv\\Scripts\\activate   # For Windows
+- source venv/bin/activate  # For macOS/Linux
 
-pip install pandas numpy
+- venv\\Scripts\\activate   # For Windows
 
-python data_discrepancy_analysis.py
+- pip install pandas numpy
+
+- python data_discrepancy_analysis.py
 
 
 #How to Analyze the Results
