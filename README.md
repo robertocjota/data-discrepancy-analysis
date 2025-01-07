@@ -1,33 +1,37 @@
 #Data Discrepancy Analysis
 
 #Project Overview
-
 This project analyzes discrepancies in backend datasets related to a recurring allowance scheduling system. These discrepancies were caused by backend issues, resulting in inconsistencies in the next_payment_day and payment_date fields. The objective is to align the backend data with the event logs (allowance_events), which are considered the source of truth.
+
 
 #What the Code Does
 The script data_discrepancy_analysis.py performs the following tasks:
 
-Load Data:
+- Load Data:
+  Reads the provided datasets: allowance_events.json, allowance_backend_table.csv, and payment_schedule_backend_table.csv.
 
-Reads the provided datasets: allowance_events.json, allowance_backend_table.csv, and payment_schedule_backend_table.csv.
-Data Processing:
+- Data Processing:
+  Cleans and preprocesses the allowance_events dataset to extract user details, allowance frequency, and payment days.
 
-Cleans and preprocesses the allowance_events dataset to extract user details, allowance frequency, and payment days.
-Discrepancy Analysis:
+- Discrepancy Analysis:
+  Calculates the expected next_payment_day based on the event logs.
+ Compares the calculated values with the backend records (allowance_backend_table) to identify discrepancies.
 
-Calculates the expected next_payment_day based on the event logs.
-Compares the calculated values with the backend records (allowance_backend_table) to identify discrepancies.
-Classification of Discrepancies:
+- Classification of Discrepancies:
+  Categorizes discrepancies into:
+      Missing Calculation: When the calculated next_payment_day cannot be determined.
 
-Categorizes discrepancies into:
-Missing Calculation: When the calculated next_payment_day cannot be determined.
-Mismatched Values: When backend next_payment_day does not align with the calculated value.
-Other: Discrepancies that do not fit into the above categories.
-Export Results:
+    Mismatched Values: When backend next_payment_day does not align with the calculated value.
 
-Outputs two CSV files:
-comparison_results.csv: Detailed comparison of backend data and calculated values.
-discrepancy_summary.csv: Summary of discrepancies by type and count.
+    Other: Discrepancies that do not fit into the above categories.
+
+
+- Export Results:
+  Outputs two CSV files:
+
+  comparison_results.csv: Detailed comparison of backend data and calculated values.
+
+  discrepancy_summary.csv: Summary of discrepancies by type and count.
 
 
 #Files Included
