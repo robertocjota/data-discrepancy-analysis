@@ -59,12 +59,12 @@ python data_discrepancy_analysis.py
 
 
 #How to Analyze the Results
-comparison_results.csv:
 
+comparison_results.csv:
 Contains detailed comparisons between backend next_payment_day and calculated values.
 Each row represents a record with metadata and whether discrepancies exist.
-discrepancy_summary.csv:
 
+discrepancy_summary.csv:
 Provides a summary of discrepancies by type and count.
 Useful for understanding the overall scope of issues.
 
